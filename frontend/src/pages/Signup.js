@@ -39,7 +39,7 @@ function Signup() {
       if (token) {
         handleSuccess(message);
         localStorage.setItem("token", token);
-        localStorage.setItem("loggedInUser", user);
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
         setTimeout(() => {
           navigate("/home");
         }, 1000);
